@@ -2,20 +2,7 @@ import { PayloadAction, createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 import { useAppSelector } from '..';
 import { api } from '../../lib/axios';
-
-interface Course {
-  id: number;
-  name: string;
-  modules: Array<{
-    id: number;
-    title: string;
-    lessons: Array<{
-      id: string;
-      title: string;
-      duration: string;
-    }>;
-  }>;
-}
+import { Course } from '../../@types/course';
 
 export interface PlayerState {
   course: Course | null;
